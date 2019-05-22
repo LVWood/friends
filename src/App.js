@@ -22,8 +22,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Friends</h1>
+      <div className="App">
+        <div className="header">
+          <h1>Friends</h1>
+        </div>
         <FriendForm />
         {this.state.friends.map(friend => {
           return <FriendsList person={friend} />

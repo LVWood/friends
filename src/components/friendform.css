@@ -1,0 +1,20 @@
+.friend-form { 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 3rem;
+}
+
+.friend-form h4, input {
+    text-align: center;
+    line-height: 1.8rem;
+    margin: 0;
+}
+
+.friend-form button {
+    background-color: rgb(36, 39, 39);
+    color: turquoise;
+    border: none;
+    height: 2rem;
+}
