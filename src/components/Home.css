@@ -1,0 +1,16 @@
+
+.header {
+    width: 100%;
+    height: 20vh;
+    background-color: turquoise;
+    background-image: url("./assets/friends-cropped.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  .nav-menu {
+    text-decoration: none;
+    color: white;
+    
+  }

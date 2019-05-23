@@ -1,7 +1,6 @@
 .App {
   left: 50%;
 }
-
 .header {
   width: 100%;
   height: 20vh;
@@ -12,3 +11,27 @@
   background-position: center center;
 }
 
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.nav-item {
+  color: rgb(27, 26, 26);
+  text-decoration: none;
+  margin: 10px 30px;
+  }
+
+.home-description h1 {
+  margin: 2rem;
+}
+
+.home-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 50px;
+
+}
