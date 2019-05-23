@@ -1,33 +1,55 @@
 .App {
-  text-align: center;
+  left: 50%;
+}
+.header {
+  width: 100%;
+  height: 20vh;
+  background-color: turquoise;
+  background-image: url("./assets/friends-cropped.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-item {
+  color: rgb(27, 26, 26);
+  text-decoration: none;
+  margin: 10px 30px;
+  }
+
+.home-description h1 {
+  margin: 2rem;
+}
+
+.home-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 50px;
+
+}
+
+.friend-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.friend-card h2 {
+  text-decoration: none;
+  color:  rgb(27, 26, 26);
+  line-height: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

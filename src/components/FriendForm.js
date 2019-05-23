@@ -1,15 +1,63 @@
 import React from 'react';
-import { types } from '@babel/core';
+import './friendform.css';
+import axios from 'axios';
 
-const FriendForm = () => {
-    return (
-        <form className="friend-form">
-            <h4>Add a friend</h4>
-            <input type="text" placeholder="name"></input>
-            <input type="text" placeholder="age"></input>
-            <input type="text" placeholder="email"></input>
-        </form>
-    )
+class FriendForm extends React.Component {
+    state = {
+        friend: this.props.activeFriend || {
+            name: '',
+            age: '',
+            email: '',
+        }
+    };
+
+    changeHandler = e => {
+        e.persist();
+        this.setState(prevState => ({
+            friend: {
+                ...prevState.friend, 
+                [e.target.name]: e.target.value
+            }
+        }))
+    }
+
+    handleSubmit = e => {
+        this.props.addFriend(e, this.state.friend);
+        this.setState({
+            friend: {
+                name: '',
+                age: '',
+                email: ''
+            }
+        })
+    }
+    
+    render() {
+        return (
+            <form className="friend-form" onSubmit={this.handleSubmit}>
+                <input 
+                    type="text" 
+                    name="name" 
+                    placeholder="name" 
+                    onChange={this.changeHandler}
+                    value={this.state.friend.name} />
+                <input 
+                    type="number" 
+                    name="age"
+                    placeholder="age"
+                    onChange={this.changeHandler}
+                    value={this.state.friend.age} />
+                <input 
+                    type="text" 
+                    name="email"
+                    placeholder="email"
+                    onChange={this.changeHandler} 
+                    value={this.state.friend.email}/>
+                <button onSubmit={this.props.addFriend}>Add Friend</button>
+            </form>
+        )
+    }
+    
 }
 
 export default FriendForm;

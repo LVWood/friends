@@ -1,0 +1,17 @@
+.friend-card {
+    /* border: 1px solid red; */
+    margin: 20px 3rem;
+}
+
+.friend-card h2, p {
+    margin: 0;
+    line-height: 1.6rem;
+    margin-right: 10px;
+}
+
+.card-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
