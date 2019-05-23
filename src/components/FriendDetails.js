@@ -17,6 +17,7 @@ const FriendDetails = ({match, history, friends}) => {
 
     return (
         <div className="card-details">
+            <h2>{friend.name}</h2>
             <p>{friend.name} is {friend.age} years old.</p>
             <p>You can contact {friend.name} at {friend.email}.</p> 
         </div>
